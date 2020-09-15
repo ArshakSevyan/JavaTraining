@@ -16,19 +16,24 @@ public class ExactlyKTimes {
             array001[i] = (int) ((Math.random() * 10));
         }
         System.out.println(Arrays.toString(array001));
-        int y=1;
+        boolean noMatching = true;
 
-        for (int i=0;i<array001.length;i++){
-            for (int j=i+1;j<array001.length;j++){
-                if (array001[i]==array001[j]){
-                    y=y+1;
-                    if (y==x){
-                        System.out.println(array001[j]);
-                    }else {
-                        System.out.println("No matching");
-                    }
+        for (int i = 0; i < array001.length; i++) {
+            int y = 1;
+            for (int j = i + 1; j < array001.length; j++) {
+                if (array001[i] == array001[j]) {
+                    y = y + 1;
                 }
             }
+            if (y == x) {
+                noMatching=false;
+                System.out.println(array001[i]);
+                break;
+            }
+        }
+
+        if (noMatching){
+            System.out.println("No matching");
         }
 
 

@@ -19,13 +19,16 @@ public class UnUccuredElement {
         System.out.println(Arrays.toString(array002));
 
 
-        for (int i = 0; i < array001.length; i++) {
-            for (int j = 0; j < array002.length; j++) {
-                if (array001[i] != array002[j]) {
-                    System.out.println(array001[i]);
-
+        for (int i : array001) {
+            boolean x = false;
+            for (int j : array002) {
+                if (i == j) {
+                    x=true;
+                    break;
 
                 }
+                }if (!x){
+                System.out.println(i);
             }
         }
     }
