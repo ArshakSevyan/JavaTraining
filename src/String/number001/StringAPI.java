@@ -64,24 +64,25 @@ public class StringAPI {
             } else {
                 return "Invalid Case";
             }
-            }if (count == 0) {
+        }
+        if (count == 0) {
             return "Brackets are match";
-        }else return "Brackets don't match";
+        } else return "Brackets don't match";
     }
 
     // Number 5
 
-    String contains(String origin,String specified){
+    String contains(String origin, String specified) {
         String lowerCaseOrigin = origin.toLowerCase();
         String lowerCaseSpecified = specified.toLowerCase();
-        if (lowerCaseOrigin.contains(lowerCaseSpecified)){
+        if (lowerCaseOrigin.contains(lowerCaseSpecified)) {
             return "Contains";
-        }else return "Not Contains";
+        } else return "Not Contains";
     }
 
     // Number 6
 
-    String startsWith(String one,String two) {
+    String startsWith(String one, String two) {
         String lowerCase001 = one.toLowerCase();
         String lowerCase002 = two.toLowerCase();
         char[] first = lowerCase001.toCharArray();
@@ -91,37 +92,38 @@ public class StringAPI {
                 return "Origin String starts with the contents of another";
             } else return "Not stars";
 
-        } return "Not valid";
+        }
+        return "Not valid";
     }
 
     // Number 7
-    String endsWith(String inputOne,String inputTwo){
+    String endsWith(String inputOne, String inputTwo) {
         String lowerCaseInputOne = inputOne.toLowerCase();
         String lowerCaseInputTwo = inputTwo.toLowerCase();
         char[] firstInput = lowerCaseInputOne.toCharArray();
         char[] secondInput = lowerCaseInputTwo.toCharArray();
         for (int i = 0; i < secondInput.length; i++) {
-            if (firstInput[firstInput.length-1] == secondInput[i]) {
+            if (firstInput[firstInput.length - 1] == secondInput[i]) {
                 return "Origin String ends with the contents of another";
             } else return "Not ends";
 
-        } return "Not valid";
+        }
+        return "Not valid";
     }
 
     //Number 8
 
-    String removingDuplicates(String input){
+    String removingDuplicates(String input) {
         char[] arrayNew = input.toCharArray();
-        String noDublicates="";
-        for (char value:arrayNew){
-            if (noDublicates.indexOf(value)==-1){
-                noDublicates+=value;
+        String noDublicates = "";
+        for (char value : arrayNew) {
+            if (noDublicates.indexOf(value) == -1) {
+                noDublicates += value;
             }
-        }return noDublicates;
-
+        }
+        return noDublicates;
     }
 
 
-
-    }
+}
 

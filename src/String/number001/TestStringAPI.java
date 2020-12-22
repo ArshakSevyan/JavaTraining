@@ -1,6 +1,9 @@
 package String.number001;
 
-import org.junit.Test;
+
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import static String.number001.Constans.OUT_OF_BOUDS;
 
@@ -76,7 +79,7 @@ public class TestStringAPI {
     public void endsWith(){
         StringAPI api = new StringAPI();
         String result = api.endsWith("We will win the Champions League","League of Shadows");
-        assert result.equals("Origin String ends with the contents of another");
+        Assert.assertEquals(result,"Not ends");
     }
 
     @Test
